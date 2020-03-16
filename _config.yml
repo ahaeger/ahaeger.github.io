@@ -1,0 +1,7 @@
+author: Alexander Häger
+description: Personal website of Alexander Häger
+url: https://haeger.me
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
