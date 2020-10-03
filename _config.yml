@@ -1,6 +1,10 @@
-author: Alexander Häger
-description: Personal website of Alexander Häger
+# https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 url: https://haeger.me
+title: haeger.me
+description: Personal website of Alexander Häger
+author: Alexander Häger
+
+exclude: ["Gemfile", "Gemfile.lock", "README.md"]
 
 plugins:
   - jekyll-sitemap
