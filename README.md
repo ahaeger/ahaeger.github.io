@@ -1,14 +1,25 @@
-# ahaeger.github.io
+# haeger.me
 
-My personal Github pages site.
+My personal website.
 
 ## Development setup
 
-Install a [ruby development environment](https://jekyllrb.com/docs/installation/) along with
-[jekyll and bundler](https://jekyllrb.com/docs/). Run `bundle install` to install dependencies.
+Follow installation instructions for [Jekyll](https://jekyllrb.com/docs/installation/).
 
-Use the following command to run the local development server:
+Install dependencies with:
 
 ```bash
-$ bundle exec jekyll serve --incremental
+bundle install
+``` 
+
+Run the local development server with:
+
+```bash
+bundle exec jekyll serve
+```
+
+Update dependencies with:
+
+```bash
+bundle update
 ```
