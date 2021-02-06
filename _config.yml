@@ -4,7 +4,7 @@ title: haeger.me
 description: Personal website of Alexander Häger
 author: Alexander Häger
 
-exclude: ["Gemfile", "Gemfile.lock", "README.md"]
+exclude: ["Gemfile", "Gemfile.lock", "README.md", "CNAME"]
 
 plugins:
   - jekyll-sitemap
