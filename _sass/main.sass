@@ -17,3 +17,28 @@
 $blackish: #1a222c
 $whiteish: #ebebeb
 $spgreen: #1ED760
+
+
+/*
+ * Page-wide defaults
+ */
+html
+  font-size: 8px
+@media only screen and (min-width: 768px)
+  html
+    font-size: 16px
+
+body
+  background-color: $blackish
+
+p
+  font-family: "Anko", serif
+  color: $whiteish
+
+a
+  color: $whiteish
+  text-decoration-style: dashed
+  transition: color 200ms
+  transition-timing-function: ease-in-out
+a:hover
+  color: $spgreen

@@ -2,57 +2,34 @@
 ---
 @import "main"
 
-body
-  background-color: $blackish
-
-h1
-  font-family: "RedHook", sans-serif
-  font-size: 5em
-  font-weight: normal
-  color: $whiteish
-  margin: 0.1em 0
-
-p
-  font-family: "Anko", serif
-  font-size: 1em
-  color: $whiteish
-  line-height: 1.5
-
-a
-  color: $whiteish
-  text-decoration-style: dashed
-  transition: color 200ms
-  transition-timing-function: ease-in-out
-
-a:hover
-  color: $spgreen
-
-main
+.front-page
   display: flex
   height: 100vh
 
-header
-  text-align: center
-  position: absolute
-  left: 50%
-  top: 50%
-  transform: translate(-50%,-50%)
-  margin: 0 auto
+  &__wrapper
+    text-align: center
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    margin: 0 auto
 
-ul
-  padding: 0
+  &__name
+    font-family: "RedHook", sans-serif
+    font-size: 10rem
+    font-weight: normal
+    color: $whiteish
+    margin: 0.1rem 0
 
-ul li
-  display: inline
-  color: $whiteish
-  font-size: 2.5em
-  margin: 0 5px
+  &__text
+    font-size: 2rem
+    line-height: 1.5
 
-@media only screen and (min-width: 768px)
-  h1
-    font-size: 10em
-  p
-    font-size: 2em
-  ul li
-    font-size: 5em
+  &__links
+    padding: 0
+
+  &__link
+    display: inline
+    font-size: 5rem
+    margin: 0 5px
 
