@@ -9,3 +9,9 @@ exclude: ["Gemfile", "Gemfile.lock", "README.md", "CNAME"]
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate
+
+permalink: /blog/:categories/:year/:month/:day/:title/  # Removed the .html at the end
+
+paginate: 10
+paginate_path: "/blog/page:num/"

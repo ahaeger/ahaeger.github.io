@@ -33,3 +33,46 @@
     font-size: 5rem
     margin: 0 5px
 
+// TODO Refactor .blog into some base layout? It's more generic than just for the blog
+.blog
+  display: grid
+  grid-template-columns: 150px auto 150px
+  @media only screen and (min-width: $lg_screen)
+    &
+      grid-template-rows: 100px auto
+  grid-gap: 0.5rem
+  max-width: 70rem
+  margin: 0 auto
+
+  &__content
+    grid-column: 1 / 4
+    grid-row: 2 / 3
+    @media only screen and (min-width: $lg_screen)
+      &
+        grid-column: 2 / 3
+
+  &__entries
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+    li
+      margin-bottom: 3rem
+    a
+      text-decoration: none // TODO Should remove the global text-decoration for anchors
+
+  &__entry
+    @include hover-color("h2, span", "&:hover h2, &:hover span")
+
+  &__sidebar
+    grid-column: 3 / 4
+    grid-row: 2 / 3
+
+.tag
+  @include hover-color
+  font-family: "Droid Sans Mono", monospace // TODO Need monospace font
+
+.pagination
+  text-align: center
+  &--hidden
+    visibility: hidden

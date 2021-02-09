@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<!-- TODO Finish layout and styling -->
+<div class="blog">
+    <main class="blog__content">
+        <article>
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.date | date: "%Y-%m-%d" }} - {{ page.author }} {% for tag in site.tags %} #{{ tag[0] }} {% endfor %}</p>
+
+            {{ content }}
+            <p>// haeger</p>
+        </article>
+    </main>
+</div>

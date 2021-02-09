@@ -1,3 +1,9 @@
+// TODO Apparently should use @use instead of @import.
+// https://css-tricks.com/introducing-sass-modules/
+// This will affect imports in artwork.sass as well, as this animations import
+// seem to "cascade" into that file as well.
+@import "animations"
+
 /*
  * Fonts
  */
@@ -18,18 +24,24 @@ $blackish: #1a222c
 $whiteish: #ebebeb
 $spgreen: #1ED760
 
+$lg_screen: 768px
+
 
 /*
  * Page-wide defaults
  */
 html
   font-size: 8px
-@media only screen and (min-width: 768px)
-  html
-    font-size: 16px
+  @media only screen and (min-width: $lg_screen)
+    &
+      font-size: 17px
 
 body
   background-color: $blackish
+
+h1, h2, h3, h4, h5, h6
+  font-family: sans-serif // TODO Need sans-serif font
+  color: $whiteish
 
 p
   font-family: "Anko", serif
@@ -38,7 +50,4 @@ p
 a
   color: $whiteish
   text-decoration-style: dashed
-  transition: color 200ms
-  transition-timing-function: ease-in-out
-a:hover
-  color: $spgreen
+  @include hover-color
