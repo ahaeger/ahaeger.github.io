@@ -1,0 +1,29 @@
+// Can't use @use instead of @import until newer sass version is used in Github pages.
+@import "variables"
+@import "animations"
+
+/*
+ * Page-wide defaults
+ */
+html
+  font-size: 8px
+  @media only screen and (min-width: $lg_screen)
+    &
+      font-size: 17px
+
+body
+  background-color: $blackish
+
+h1, h2, h3, h4, h5, h6
+  @extend %heading-font
+  color: $whiteish
+
+p
+  @extend %text-font
+  color: $whiteish
+  font-size: 0.9rem
+
+a
+  color: $whiteish
+  text-decoration-style: dashed
+  @include hover-color
