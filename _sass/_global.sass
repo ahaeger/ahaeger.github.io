@@ -1,4 +1,3 @@
-// Can't use @use instead of @import until newer sass version is used in Github pages.
 @import "variables"
 @import "animations"
 
@@ -14,6 +13,9 @@ html
 body
   background-color: $blackish
 
+/*
+ * Typography
+ */
 h1, h2, h3, h4, h5, h6
   @extend %heading-font
   color: $whiteish
