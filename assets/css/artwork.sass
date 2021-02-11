@@ -45,6 +45,10 @@
   margin: 0 auto
 
   &__content
+    > h1
+      font-size: 3rem
+      margin-top: 0
+
     grid-column: 1 / 4
     grid-row: 2 / 3
     @media only screen and (min-width: $lg_screen)
@@ -56,7 +60,7 @@
     padding: 0
     margin: 0
 
-    li
+    > li
       margin-bottom: 3rem
     a
       text-decoration: none // TODO Should remove the global text-decoration for anchors
@@ -64,13 +68,28 @@
   &__entry
     @include hover-color("h2, span", "&:hover h2, &:hover span")
 
+  &__entry-heading
+    font-size: 1.8rem
+    margin-bottom: 0
+    padding-bottom: 0.5rem
+
+  &__entry-sub
+    @include heading-font
+    font-size: 0.8rem
+    margin: 0
+
+  &__excerpt
+    margin-top: 0
+    padding-top: 0.8rem
+
   &__sidebar
     grid-column: 3 / 4
     grid-row: 2 / 3
 
 .tag
   @include hover-color
-  font-family: "Droid Sans Mono", monospace // TODO Need monospace font
+  font-family: 'JetBrains Mono', monospace
+  font-weight: lighter
 
 .pagination
   text-align: center
