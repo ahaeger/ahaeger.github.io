@@ -1,0 +1,52 @@
+@import "variables"
+
+/*
+ *  Narrow-style responsive holy-grail layout.
+ *  Example layout:
+ *  <div class="container">
+ *    <header class="container__header">     ... </header>
+ *    <aside class="container__aside-left">  ... </aside>
+ *    <main class="container__main">         ... </main>
+ *    <aside class="container__aside-right"> ... </aside>
+ *    <footer class="container__footer">     ... </footer>
+ *  </div>
+ *
+ *  All "components" are optional.
+ */
+
+%cell-padding
+  padding: 0.5rem
+
+.container
+  display: grid
+  grid-gap: 0.2rem
+  grid-template-columns: 150px auto 150px
+  max-width: 70rem
+  margin: 0 auto
+
+  //header, aside, main, footer
+  //  border: 1px white dashed
+
+  &__header
+    @extend %cell-padding
+    grid-column: 2 / 3
+
+  &__main
+    @extend %cell-padding
+    grid-column: 2 / 3
+
+  &__left-aside
+    @extend %cell-padding
+    grid-column: 1 / 2
+
+  &__right-aside
+    @extend %cell-padding
+    grid-column: 3 / 4
+
+  &__footer
+    @extend %cell-padding
+    grid-column: 2 / 3
+
+  @media only screen and (max-width: $lg_screen)
+    &__main, &__left-aside, &__right-aside, &__header, &__footer
+      grid-column: 1 / 4

@@ -1,6 +1,9 @@
 ---
 ---
 @import "main"
+@import "container"
+@import "header"
+
 
 .front-page
   display: flex
@@ -33,27 +36,21 @@
     font-size: 5rem
     margin: 0 5px
 
-// TODO Refactor .blog into some base layout? It's more generic than just for the blog
+// TODO Refactor .blog with some better naming?
 .blog
-  display: grid
-  grid-template-columns: 150px auto 150px
-  @media only screen and (min-width: $lg_screen)
-    &
-      grid-template-rows: 100px auto
-  grid-gap: 0.5rem
-  max-width: 70rem
-  margin: 0 auto
+  &__header
+    a
+      text-decoration: none
+    h1
+      @include display-font
+      font-size: 5rem
+      text-align: right
+      margin: 0
 
   &__content
     > h1
       font-size: 3rem
       margin-top: 0
-
-    grid-column: 1 / 4
-    grid-row: 2 / 3
-    @media only screen and (min-width: $lg_screen)
-      &
-        grid-column: 2 / 3
 
   &__entries
     list-style-type: none
@@ -81,10 +78,6 @@
   &__excerpt
     margin-top: 0
     padding-top: 0.8rem
-
-  &__sidebar
-    grid-column: 3 / 4
-    grid-row: 2 / 3
 
 .tag
   @include hover-color
