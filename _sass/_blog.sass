@@ -3,15 +3,6 @@
 
 // TODO Refactor .blog with some better naming?
 .blog
-  &__header
-    a
-      text-decoration: none
-    h1
-      @extend %display-font
-      font-size: 5rem
-      text-align: right
-      margin: 0
-
   &__content
     > h1
       font-size: 3rem
@@ -24,11 +15,11 @@
 
     > li
       margin-bottom: 3rem
-    a
-      text-decoration: none // TODO Should remove the global text-decoration for anchors
 
   &__entry
     @include hover-color("h2, span", "&:hover h2, &:hover span")
+    > a
+      text-decoration: none
 
   &__entry-heading
     font-size: 1.8rem
