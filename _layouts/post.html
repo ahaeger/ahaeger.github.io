@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<main class="container__main">
-    <article class="post">
-        <h1 id="{{ page.title | slugify}}" class="post__title">{{ page.title }}</h1>
+<main class="container__main post">
+    <article>
+        <h1 id="{{ age.title | slugify }}" class="post__title">{{ page.title }}</h1>
         <p class="post__meta-strip">
             {{ page.date | date: "%Y-%m-%d"}}
             {% if page.tags.size != 0 %} &sdot; {% endif %}
@@ -15,4 +15,13 @@ layout: default
 
         <p>//&nbsp;haeger</p>
     </article>
+
+    <footer class="post__footer">
+        <hr>
+        <span>
+            <a href="#top">Back to top</a>
+            &sdot;
+            <a href="{% link blog/index.html %}">Back to blog</a>
+        </span>
+    </footer>
 </main>
