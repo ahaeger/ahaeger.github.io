@@ -2,14 +2,17 @@
 layout: default
 ---
 <!-- TODO Finish layout and styling -->
-<div class="container__main">
-    <main class="blog__content">
-        <article>
-            <h1>{{ page.title }}</h1>
-            <p>{{ page.date | date: "%Y-%m-%d" }} - {{ page.author }} {% for tag in site.tags %} #{{ tag[0] }} {% endfor %}</p>
+<main class="container__main">
+    <article class="post">
+        <h1 id="{{ page.title | slugify}}" class="post__heading">{{ page.title }}</h1>
+        <p class="post__meta-strip">
+            {{ page.date | date: "%Y-%m-%d"}}
+            {% if page.tags.size != 0 %} &sdot; {% endif %}
+            {% for tag in page.tags %} <a class="tag" href="{% link blog/tags.html %}#{{ tag }}">#{{ tag }}</a> {% endfor %}
+        </p>
 
-            {{ content }}
-            <p>// haeger</p>
-        </article>
-    </main>
-</div>
+        {{ content }}
+
+        <p>//&nbsp;haeger</p>
+    </article>
+</main>

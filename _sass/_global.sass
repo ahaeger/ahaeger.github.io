@@ -5,10 +5,7 @@
  * Page-wide defaults
  */
 html
-  font-size: 8px
-  @media only screen and (min-width: $lg_screen)
-    &
-      font-size: 17px
+  font-size: 17px
 
 body
   background-color: $blackish
@@ -20,10 +17,10 @@ h1, h2, h3, h4, h5, h6
   @extend %heading-font
   color: $whiteish
 
-p
+p, ul, ol
   @extend %text-font
   color: $whiteish
-  font-size: 0.9rem
+  font-size: 1.0rem
 
 a
   @include hover-color
