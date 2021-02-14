@@ -1,7 +1,6 @@
 @import "variables"
 @import "animations"
 
-// TODO Refactor .blog with some better naming?
 .blog
   > h1
     font-size: 3rem
@@ -11,28 +10,22 @@
     list-style-type: none
     padding: 0
     margin: 0
-
     > li
       margin-bottom: 3rem
 
-  &__entry
+  &__post
     @include hover-color("h2, span", "&:hover h2, &:hover span")
     > a
       text-decoration: none
 
-  &__entry-heading
+  &__post-title
     font-size: 1.8rem
     margin-bottom: 0
     padding-bottom: 0.5rem
 
-  &__entry-sub
+  &__post-meta
     @extend %heading-font
-    font-size: 0.8rem
     margin: 0
-
-  &__excerpt
-    margin-top: 0
-    padding-top: 0.8rem
 
 .pagination
   text-align: center
@@ -40,12 +33,8 @@
     visibility: hidden
 
 .post
-  &__heading
+  &__title
     font-size: 3.0rem
-    margin-bottom: 0
-    padding-bottom: 0.5rem
 
   &__meta-strip
     @extend %heading-font
-    font-size: 0.8rem
-    margin: 0
