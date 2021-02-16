@@ -19,7 +19,17 @@ Here are some things I added to this cookie cutter that I think most CLIs benefi
 
 Here's the code for the thingy-thingy:
 
-```python
-counter = 1
-print(counter)  # Can't be sure enough... 
-```
+{% highlight python linenos %}
+# factorial.py
+
+def factorial(i: int):
+  if i == 0:
+    return 1
+  else:
+    return i * factorial(i-1)  # This is the fancy part. What happens if this line is very long?
+
+if __name__ == '__main__':
+  n = 5
+  n_factorial = factorial(n)
+  print(n_factorial)
+{% endhighlight %}

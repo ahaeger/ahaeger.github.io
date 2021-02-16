@@ -26,3 +26,14 @@ a
   @include hover-color
   color: $whiteish
   text-decoration-style: solid
+
+.highlight
+  .gutter, .gutter pre.lineno
+    background-color: darken($monokai_black, 2%)
+    color: lighten($monokai_black, 10%)
+    pre
+      @extend %code-font
+
+  .code span
+    @extend %code-font
+
