@@ -14,8 +14,9 @@
  *  All "components" are optional.
  */
 
-%cell-padding
+%cell-common
   padding: 0.5rem
+  min-width: 0
 
 .container
   display: grid
@@ -23,25 +24,29 @@
   grid-template-columns: 150px auto 150px
   max-width: 70rem
   margin: 0 auto
+  // Prevent cells from overflowing
+  // https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
+  min-width: 0
+  min-height: 0
 
   &__header
-    @extend %cell-padding
+    @extend %cell-common
     grid-column: 2 / 3
 
   &__main
-    @extend %cell-padding
+    @extend %cell-common
     grid-column: 2 / 3
 
   &__left-aside
-    @extend %cell-padding
+    @extend %cell-common
     grid-column: 1 / 2
 
   &__right-aside
-    @extend %cell-padding
+    @extend %cell-common
     grid-column: 3 / 4
 
   &__footer
-    @extend %cell-padding
+    @extend %cell-common
     grid-column: 2 / 3
 
   @media only screen and (max-width: $lg_screen)

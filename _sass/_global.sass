@@ -9,6 +9,7 @@ html
 
 body
   background-color: $blackish
+  //overflow: hidden
 
 /*
  * Typography
@@ -27,13 +28,11 @@ a
   color: $whiteish
   text-decoration-style: solid
 
+// Extend Pygment's code highlighting
 .highlight
-  .gutter, .gutter pre.lineno
-    background-color: darken($monokai_black, 2%)
-    color: lighten($monokai_black, 10%)
-    pre
-      @extend %code-font
-
-  .code span
+  pre>code span
     @extend %code-font
 
+  pre
+    padding: 1rem
+    overflow-x: auto

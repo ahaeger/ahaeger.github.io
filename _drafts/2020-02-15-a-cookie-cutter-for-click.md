@@ -19,14 +19,14 @@ Here are some things I added to this cookie cutter that I think most CLIs benefi
 
 Here's the code for the thingy-thingy:
 
-{% highlight python linenos %}
+{% highlight python %}
 # factorial.py
 
 def factorial(i: int):
   if i == 0:
     return 1
   else:
-    return i * factorial(i-1)  # This is the fancy part. What happens if this line is very long?
+    return i * factorial(i-1)  # This is the fancy part.
 
 if __name__ == '__main__':
   n = 5
