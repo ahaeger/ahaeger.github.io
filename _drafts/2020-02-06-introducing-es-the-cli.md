@@ -1,6 +1,5 @@
 ---
 layout: post
-author: haeger
 title: Introducing "es" - the CLI
 tags: elasticsearch es cli ops
 ---

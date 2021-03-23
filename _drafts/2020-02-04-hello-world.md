@@ -1,6 +1,7 @@
 ---
 layout: post
-author: haeger
+title: Hello World
+date: 2020-02-04 22:30:00 +0100
 cover-photo: https://source.unsplash.com/FO7JIlwjOtU/1600x900
 cover-photo-title: They're all so tiny!
 ---

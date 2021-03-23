@@ -1,6 +1,5 @@
 ---
 layout: post
-author: haeger
 tags: app-engine scrapy flask
 ---
 

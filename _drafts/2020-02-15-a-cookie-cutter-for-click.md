@@ -1,6 +1,5 @@
 ---
 layout: post
-author: haeger
 tags: cli click cookie-cutter
 ---
 
