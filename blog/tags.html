@@ -1,21 +1,11 @@
 ---
 layout: default
 ---
-<!-- TODO Finish layout and styling -->
-
 {% assign tags = site.tags | sort %}
 
 <div class="container__main">
     <main class="blog__content">
-        <h1>Tags</h1>
-        <p>
-            {% for tag in tags %}
-                <!-- TODO Style this as pills? -->
-                <span><a href="#{{ tag[0] }}">{{ tag[0] }} {{ tag[1] | size }}</a></span>
-            {% endfor %}
-        </p>
-
-        <h1>Articles by tag</h1>
+        <h1>Posts by tag</h1>
         {% for tag in tags %}
             <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
             <ul>
