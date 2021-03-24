@@ -1,8 +1,11 @@
 # https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 url: https://haeger.me
 title: haeger.me
-description: Personal website of Alexander Häger
+description: haeger's scribbles
 author: Alexander Häger
+social:
+  links:
+    - https://www.linkedin.com/in/alexander-häger-5b8a2438
 
 exclude: ["Gemfile", "Gemfile.lock", "README.md", "CNAME"]
 

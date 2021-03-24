@@ -5,7 +5,7 @@ layout: default
 <main class="container__main post">
     <article>
         <h1 id="{{ age.title | slugify }}" class="post__title">{{ page.title }}</h1>
-        {% if page.cover-photo %}<img src="{{ page.cover-photo }}" title="{{ page.cover-photo-title }}" alt="Cover photo">{% endif %}
+        {% if page.image %}<img src="{{ page.image }}" title="{{ page.image-title }}" alt="Cover photo">{% endif %}
         <p class="post__meta-strip">
             {{ page.date | date: "%Y-%m-%d"}}
             {% if page.tags.size != 0 %} &sdot; {% endif %}
