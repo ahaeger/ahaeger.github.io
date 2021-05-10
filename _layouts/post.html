@@ -5,7 +5,16 @@ layout: default
 <main class="container__main post">
     <article>
         <h1 id="{{ age.title | slugify }}" class="post__title">{{ page.title }}</h1>
-        {% if page.image %}<img src="{{ page.image }}" title="{{ page.image-title }}" alt="Cover photo">{% endif %}
+        {% if page.image %}
+            <figure class="blog-img">
+                <img src="{{ page.image }}" title="{{ page.image-title }}" alt="Cover photo">
+                {% if page.image-credit and page.image-credit-link %}
+                    <figcaption class="blog-img__caption">
+                        Photo by <a href="{{ page.image-credit-link }}" target="_blank">{{ page.image-credit }}</a>
+                    </figcaption>
+                {% endif %}
+            </figure>
+        {% endif %}
         <p class="post__meta-strip">
             {{ page.date | date: "%Y-%m-%d"}}
             {% if page.tags.size != 0 %} &sdot; {% endif %}
