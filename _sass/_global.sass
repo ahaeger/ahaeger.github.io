@@ -1,0 +1,39 @@
+@import "variables"
+@import "animations"
+
+/*
+ * Page-wide defaults
+ */
+html
+  font-size: 17px
+  @media only screen and (min-width: $lg_screen)
+    font-size: 20px
+
+body
+  background-color: $blackish
+
+/*
+ * Typography
+ */
+h1, h2, h3, h4, h5, h6
+  @extend %heading-font
+  color: $whiteish
+
+p, ul, ol, span, figcaption
+  @extend %text-font
+  color: $whiteish
+  font-size: 0.9rem
+
+a
+  @include hover-color
+  color: $whiteish
+  text-decoration-style: solid
+
+// Extend Pygment's code highlighting
+.highlight
+  pre>code span
+    @extend %code-font
+
+  pre
+    padding: 1rem
+    overflow-x: auto

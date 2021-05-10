@@ -1,19 +1,9 @@
-/*
- * Fonts
- */
-@font-face
-  font-family: "RedHook"
-  src: url("../fonts/red_hook/Red\ Hook.otf") format("opentype")
-  font-weight: normal
-
-@font-face
-  font-family: "Anko"
-  src: url("../fonts/anko/AnkoPersonalUse.otf") format("opentype")
-  font-weight: normal
-
-/*
- * Variables
- */
-$blackish: #1a222c
-$whiteish: #ebebeb
-$spgreen: #1ED760
+// Can't use @use instead of @import until newer sass version is used in Github pages.
+@import variables
+@import global
+@import container
+@import header
+@import animations
+@import front-page
+@import blog
+@import monokai.css

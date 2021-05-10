@@ -1,0 +1,6 @@
+// A ease-in-out of color on hovering
+@mixin hover-color($animation-selector: "&", $color-selector: "&:hover", $color: $spgreen)
+  #{$animation-selector}
+    transition: color 200ms ease-in-out
+  #{$color-selector}
+    color: $color

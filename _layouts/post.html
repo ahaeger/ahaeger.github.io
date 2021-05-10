@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<main class="container__main post">
+    <article>
+        <h1 id="{{ age.title | slugify }}" class="post__title">{{ page.title }}</h1>
+        {% if page.image %}
+            <figure class="blog-img">
+                <img src="{{ page.image }}" title="{{ page.image-title }}" alt="Cover photo">
+                {% if page.image-credit and page.image-credit-link %}
+                    <figcaption class="blog-img__caption">
+                        Photo by <a href="{{ page.image-credit-link }}" target="_blank">{{ page.image-credit }}</a>
+                    </figcaption>
+                {% endif %}
+            </figure>
+        {% endif %}
+        <p class="post__meta-strip">
+            {{ page.date | date: "%Y-%m-%d"}}
+            {% if page.tags.size != 0 %} &sdot; {% endif %}
+            {% for tag in page.tags %} <a class="tag" href="{% link blog/tags.html %}#{{ tag }}">#{{ tag }}</a> {% endfor %}
+        </p>
+
+        {{ content }}
+
+        <p>//&nbsp;haeger</p>
+    </article>
+
+    <footer class="post__footer">
+        <hr>
+        <span>
+            <a href="#top">Back to top</a>
+            &sdot;
+            <a href="{% link blog/index.html %}">Back to blog</a>
+        </span>
+    </footer>
+</main>

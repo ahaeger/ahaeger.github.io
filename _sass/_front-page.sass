@@ -1,0 +1,33 @@
+@import "variables"
+
+.front-page
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 99vh
+  padding: 0.5vh
+
+  &__wrapper
+    text-align: center
+
+  &__name
+    font-family: "RedHook", sans-serif
+    font-size: 5rem
+    font-weight: normal
+    color: $whiteish
+    margin: 0.1rem 0
+    @media only screen and (min-width: $lg_screen)
+      font-size: 8rem
+
+  &__text
+    line-height: 1.5
+    @media only screen and (min-width: $lg_screen)
+      font-size: 1.5rem
+
+  &__links
+    padding: 0
+
+  &__link
+    display: inline
+    font-size: 4rem
+    margin: 0 5px
