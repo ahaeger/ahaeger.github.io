@@ -16,7 +16,7 @@ layout: default
             </figure>
         {% endif %}
         <p class="post__meta-strip">
-            {{ page.date | date: "%Y-%m-%d"}}
+            {{ page.published | date: "%Y-%m-%d"}}
             {% if page.tags.size != 0 %} &sdot; {% endif %}
             {% for tag in page.tags %} <a class="tag" href="{% link blog/tags.html %}#{{ tag }}">#{{ tag }}</a> {% endfor %}
         </p>
