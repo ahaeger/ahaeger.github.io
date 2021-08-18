@@ -30,10 +30,16 @@ a
   text-decoration-style: solid
 
 // Extend Pygment's code highlighting
-.highlight
-  pre>code span
-    @extend %code-font
+pre.highlight
+  background-color: #4e4b3f
+  padding: 1rem
+  overflow-x: auto
+  >code
+    font-size: 1.0rem
+    background: none
+    span
+      @extend %code-font
 
-  pre
-    padding: 1rem
-    overflow-x: auto
+code
+  font-size: 0.8rem
+  background-color: lighten($blackish, 10%)
