@@ -15,7 +15,7 @@ regions, with multiple clusters in each region. This of course entails a bunch
 of ops work, so I started to collect some common operations. Eventually it
 resulted in me working on this CLI on my hack time. What I wanted was to 1) run
 the same command on each corresponding deployment in all the regions/sites, 2)
-group several requests into a single command and finally 3) make something
+group common chains of curls into a single command and finally 3) make something
 slightly more human-friendly than curls in the bash history. The result
 is [`esok`][Github]!
 
